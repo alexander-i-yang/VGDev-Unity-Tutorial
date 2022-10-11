@@ -11,19 +11,21 @@ public class Player : MonoBehaviour
     public float maximumY = 90F;
     float rotationY = -60F;
     
-    public GameObject Bullet;
-    public float FireRate = 0.2f;
-    
     // For camera movement
     float CameraPanningSpeed = 10.0f;
+    
+    public GameObject Bullet;
+    public float FireRate = 0.2f;
     private float _lastFireTime = 0f;
 
+    // Start is called before the first frame update
     void Start() {
-        HideAndLockCursor();
+        
     }
-
+    
+    // Update is called once per frame
     void Update() {
-        MouseInput();
+        
     }
 
     void MouseInput() {
