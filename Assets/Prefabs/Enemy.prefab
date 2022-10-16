@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6210054685311619113}
-  - component: {fileID: 6210054685311619110}
   - component: {fileID: 6210054685311619111}
   - component: {fileID: 6210054685311619108}
   - component: {fileID: 6815454880173319993}
+  - component: {fileID: 7474116897130291102}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -35,14 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6210054685311619110
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6210054685311619109}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &6210054685311619111
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -107,7 +99,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6210054685311619109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d870d6fe888c4ab184909f430c3f3320, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c029f795e8740f6a8c9c42b88834572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TraversalTime: 10
+--- !u!33 &7474116897130291102
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210054685311619109}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
