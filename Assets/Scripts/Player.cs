@@ -57,12 +57,4 @@ public class Player : MonoBehaviour
 
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
     }
-
-    private void OnTriggerEnter(Collider other) {
-        Enemy e = other.gameObject.GetComponent<Enemy>();
-        if (e != null) {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
-    }
 }
