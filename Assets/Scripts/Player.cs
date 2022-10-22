@@ -30,19 +30,6 @@ public class Player : MonoBehaviour
         
     }
 
-    void MouseInput() {
-        MouseMove();
-        if (Input.GetMouseButton(0)) {
-        //if (true) {
-            if (Time.time - _lastFireTime >= FireRate) {
-                Rigidbody bullet = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-                Quaternion cameraRotation = Quaternion.Euler(transform.eulerAngles);
-                bullet.velocity = cameraRotation * Vector3.forward * 10;
-                _lastFireTime = Time.time;
-            }
-        }
-    }
-
     void HideAndLockCursor() {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
