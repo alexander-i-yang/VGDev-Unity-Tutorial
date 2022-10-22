@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -28,8 +30,8 @@ public class Player : MonoBehaviour
 
     void MouseInput() {
         MouseMove();
-        //if (Input.GetMouseButton(0)) {
-        if (true) {
+        if (Input.GetMouseButton(0)) {
+        //if (true) {
             if (Time.time - _lastFireTime >= FireRate) {
                 Rigidbody bullet = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
                 Quaternion cameraRotation = Quaternion.Euler(transform.eulerAngles);
@@ -52,5 +54,13 @@ public class Player : MonoBehaviour
         rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        Enemy e = other.gameObject.GetComponent<Enemy>();
+        if (e != null) {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
     }
 }

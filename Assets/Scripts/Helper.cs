@@ -9,6 +9,5 @@ public static class Helper {
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         //rotate us over time according to speed until we are in the required rotation
         transform.rotation = lookRotation;
-        Debug.Log(transform.rotation);
     }
 }
