@@ -26,8 +26,9 @@ public class Player : MonoBehaviour
     }
     
     // Update is called once per frame
-    void Update() {
-        
+    void Update()
+    {
+        MouseMove();
     }
 
     void HideAndLockCursor() {
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
         float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
 
         rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-        rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+        //rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
     }
