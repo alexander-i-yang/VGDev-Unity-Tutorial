@@ -337,6 +337,7 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 209798540425749090, guid: ddd96fb3ae591004f91533644ee2ed98, type: 3}
   MinDist: 5
   MaxDist: 10
+  EnemySpawnRate: 1
 --- !u!136 &963194231
 CapsuleCollider:
   m_ObjectHideFlags: 0

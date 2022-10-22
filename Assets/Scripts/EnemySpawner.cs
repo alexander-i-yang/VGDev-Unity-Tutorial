@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     public float MinDist = 5f;
     public float MaxDist = 10f;
 
-    private float _enemySpawnRate = 1f;
+    public float EnemySpawnRate = 1f;
     private float _nextActionTime;
     
     // Start is called before the first frame update
@@ -22,14 +22,15 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (Time.time > _nextActionTime ) {
-            _nextActionTime += _enemySpawnRate;
+            _nextActionTime += EnemySpawnRate;
             Instantiate(EnemyPrefab, RandomPos(), Quaternion.identity);
         }
 
     }
 
     Vector3 RandomPos() {
-        double angle = Random.Range(0, 360f)*2*Math.PI;
+        double a = Random.Range(0, 120f);
+        double angle = a/180*Math.PI;
         double distance = Random.Range(MinDist, MaxDist);
         return new Vector3((float)(Math.Cos(angle)*distance), 0, (float)(Math.Sin(angle)*distance));
     }
