@@ -15,10 +15,6 @@ public class Player : MonoBehaviour
     
     // For camera movement
     float CameraPanningSpeed = 10.0f;
-    
-    public GameObject Bullet;
-    public float FireRate = 0.2f;
-    private float _lastFireTime = 0f;
 
     // Start is called before the first frame update
     void Start() {
