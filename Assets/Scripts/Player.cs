@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     // For camera movement
     float CameraPanningSpeed = 10.0f;
 
+    //Quaternion cameraRotation = Quaternion.Euler(transform.eulerAngles);
+
     // Start is called before the first frame update
     void Start() {
         HideAndLockCursor();
